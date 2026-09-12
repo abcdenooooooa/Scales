@@ -1,21 +1,11 @@
-void setup() {
-  size(500, 500);  //feel free to change the size
-  noLoop(); //stops the draw() function from repeating
+void setup()
+{
+  size(400,400);
+  noLoop();
 }
-void draw() {
-  for (int y = 400;y >= 0; y -= 25)
-  {
-    for (int x = 0; x <= 400; x += 50)
-    {
-      if (y%2 == 0)
-      {
-        scale(x, y);
-      }
-      else
-      {
-        scale(x+25,y);
-}
-void scale(int x, int y) {
+
+void scale(int x, int y)
+{
   x += (Math.random()-0.5)*2;
   y += (Math.random()-0.5)*2;
   fill(47,76,180);
@@ -43,5 +33,23 @@ void scale(int x, int y) {
     g -= Math.random()*2.5-0.5;
   }
   stroke(0,0,0);
+}
+
+void draw()
+{
+  for (int y = 400;y >= 0; y -= 25)
+  {
+    for (int x = 0; x <= 400; x += 50)
+    {
+      if (y%2 == 0)
+      {
+        scale(x, y);
+      }
+      else
+      {
+        scale(x+25,y);
+      }
+    }
+  }
 }
 
